@@ -1,5 +1,5 @@
 import java.util.Scanner;
-
+// tinggal fitur defends energy dan sleep
 public class Main {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
@@ -41,62 +41,63 @@ public class Main {
         P2.display();
 
         do {
-            System.out.println("Player 1 turn");
-            System.out.println("1. Punch\n2. Kick\n3. Slash\n4. Sleep");
-            System.out.println(P1.getCharName() + " HP = " + P1.Hp);
-            System.out.println(P2.getCharName() + " HP = " + P2.Hp);
-            /*
-            P1.punch(P2);
-            P1.punch(P2);
-            System.out.println(P2.getCharName() + " HP = " + P2.Hp);
+            if (P1.FinalHp > 0) {
+                System.out.println("Player 1 turn");
+                System.out.println("1. Punch\n2. Kick\n3. Slash\n4. Sleep");
+                System.out.println(P1.getCharName() + " HP = " + P1.FinalHp);
+                System.out.println(P2.getCharName() + " HP = " + P2.FinalHp);
 
-            P2.Kick(P1);
-            P2.Kick(P1);
-            System.out.println(P1.getCharName() + " HP = " + P1.Hp);
-            */
-            skill = scan.nextInt();
-            switch (skill) {
-                case 1:
-                    P1.punch(P2);
-                    System.out.println(P1.getCharName() + " Punch " + P2.getCharName() + " " + P1.Atk);
-                    System.out.println(P2.getCharName() + " HP = " + P2.Hp);
-                    break;
-                case 2:
-                    P1.Kick(P2);
-                    System.out.println(P1.getCharName() + " Kick " + P2.getCharName() + " " + P1.Atk);
-                    System.out.println(P2.getCharName() + " HP = " + P2.Hp);
-                    break;
-                case 3:
-                    P1.Slash(P2);
-                    System.out.println(P1.getCharName() + " Slash " + P2.getCharName() + " " + P1.Atk);
-                    System.out.println(P2.getCharName() + " HP = " + P2.Hp);
-                    break;
+                skill = scan.nextInt();
+                switch (skill) {
+                    case 1:
+                        P1.punch(P2);
+                        System.out.println(P1.getCharName() + " Punch " + P2.getCharName() + " " + P1.FinalAtk);
+                        System.out.println(P2.getCharName() + " HP = " + P2.FinalHp);
+                        break;
+                    case 2:
+                        P1.Kick(P2);
+                        System.out.println(P1.getCharName() + " Kick " + P2.getCharName() + " " + P1.FinalHp);
+                        System.out.println(P2.getCharName() + " HP = " + P2.FinalHp);
+                        break;
+                    case 3:
+                        P1.Slash(P2);
+                        System.out.println(P1.getCharName() + " Slash " + P2.getCharName() + " " + P1.FinalAtk);
+                        System.out.println(P2.getCharName() + " HP = " + P2.FinalHp);
+                        break;
+                }
+            } else {
+                System.out.println(P2.getCharName() + " WIN!");
+                break;
             }
 
-            System.out.println("Player 2 turn");
-            System.out.println("1. Punch\n2. Kick\n3. Slash\n4. Sleep");
-            System.out.println(P1.getCharName() + " HP = " + P1.Hp);
-            System.out.println(P2.getCharName() + " HP = " + P2.Hp);
+            if (P2.FinalHp > 0) {
+                System.out.println("Player 2 turn");
+                System.out.println("1. Punch\n2. Kick\n3. Slash\n4. Sleep");
+                System.out.println(P1.getCharName() + " HP = " + P1.FinalHp);
+                System.out.println(P2.getCharName() + " HP = " + P2.FinalHp);
 
-            skill = scan.nextInt();
-            switch (skill) {
-                case 1:
-                    P2.punch(P1);
-                    System.out.println(P2.getCharName() + " Punch " + P1.getCharName() + " " + P2.Atk);
-                    System.out.println(P1.getCharName() + " HP = " + P1.Hp);
-                    break;
-                case 2:
-                    P2.Kick(P1);
-                    System.out.println(P2.getCharName() + " Kick " + P1.getCharName() + " " + P2.Atk);
-                    System.out.println(P1.getCharName() + " HP = " + P1.Hp);
-                    break;
-                case 3:
-                    P2.Slash(P1);
-                    System.out.println(P2.getCharName() + " Slash " + P1.getCharName() + " " + P2.Atk);
-                    System.out.println(P1.getCharName() + " HP = " + P1.Hp);
-                    break;
+                skill = scan.nextInt();
+                switch (skill) {
+                    case 1:
+                        P2.punch(P1);
+                        System.out.println(P2.getCharName() + " Punch " + P1.getCharName() + " " + P2.FinalAtk);
+                        System.out.println(P1.getCharName() + " HP = " + P1.FinalHp);
+                        break;
+                    case 2:
+                        P2.Kick(P1);
+                        System.out.println(P2.getCharName() + " Kick " + P1.getCharName() + " " + P2.FinalAtk);
+                        System.out.println(P1.getCharName() + " HP = " + P1.FinalHp);
+                        break;
+                    case 3:
+                        P2.Slash(P1);
+                        System.out.println(P2.getCharName() + " Slash " + P1.getCharName() + " " + P2.FinalAtk);
+                        System.out.println(P1.getCharName() + " HP = " + P1.FinalHp);
+                        break;
+                }
+            } else {
+                System.out.println(P1.getCharName() + " WIN!");
+                break;
             }
-
-            }while (P1.Hp > 0 || P2.Hp > 0);
+        }while (P1.FinalHp > 0 || P2.FinalHp > 0);
     }
 }
