@@ -1,10 +1,11 @@
 public class Player2 extends Player{
-    public Player2(String charName, int addHp, int addAtk, int addDef) {
-        super(charName, addHp, addAtk, addDef);
+    public Player2(String charName, int addHp, int addAtk, int addDef, int addEner) {
+        super(charName, addHp, addAtk, addDef, addEner);
     }
     int FinalHp = Hp + (this.addHp * 100);
     int FinalAtk = Atk + (this.addAtk * 10);
     int FinalDef = Def + (this.addDef * 5);
+    int FinalEner = Ener + (this.addEner * 2);
 
     public void display() {
         System.out.println("HP  : " + FinalHp);
@@ -13,14 +14,21 @@ public class Player2 extends Player{
     }
 
     public void punch(Player1 KarB) {
-        KarB.FinalHp -= FinalAtk;
+        KarB.FinalHp = FinalAtk - (KarB.FinalDef * (50 / 100));
+        FinalEner -= 2;
     }
 
     public void Kick(Player1 KarB) {
-        KarB.FinalHp -= FinalAtk;
+        KarB.FinalHp -= FinalAtk - (KarB.FinalDef * (25 / 100));
+        FinalEner -= 4;
     }
 
     public void Slash(Player1 KarB) {
-        KarB.FinalHp -= FinalAtk;
+        KarB.FinalHp -= FinalAtk - (KarB.FinalDef * (10 / 100));
+        FinalEner -= 7;
+    }
+
+    public void Sleep() {
+        FinalEner += 10;
     }
 }
