@@ -1,5 +1,5 @@
 import java.util.Scanner;
-// tinggal fitur defends energy dan sleep
+// tinggal fitur batasan additional point
 public class Main {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
