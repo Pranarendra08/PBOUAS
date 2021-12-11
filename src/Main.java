@@ -2,6 +2,7 @@ import java.util.Scanner;
 // tinggal fitur batasan additional point
 public class Main {
     public static void main(String[] args) {
+        System.out.println("");
         Scanner scan = new Scanner(System.in);
         String namaChar1, namaChar2;
         int addHp1, addAtk1, addDef1, addHp2, addAtk2, addDef2, addEner1, addEner2, skill, adds = 0;
