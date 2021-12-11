@@ -4,7 +4,7 @@ public class Main {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         String namaChar1, namaChar2;
-        int addHp1, addAtk1, addDef1, addHp2, addAtk2, addDef2, addEner1, addEner2, skill;
+        int addHp1, addAtk1, addDef1, addHp2, addAtk2, addDef2, addEner1, addEner2, skill, adds = 0;
 
         //Mengambil input untuk membuat player 1
         System.out.print("Masukkan Nama Karakter Player1 : ");
@@ -13,19 +13,26 @@ public class Main {
         System.out.println("Anda memiliki 10 additional point untuk mengupgrade Hero anda");
         System.out.println("Masukkan additional point untuk HP : ");
         addHp1 = scan.nextInt();
+        adds += addHp1;
 
         System.out.println("Masukkan additional point untuk Atrack : ");
         addAtk1 = scan.nextInt();
+        adds += addAtk1;
 
         System.out.println("Masukkan additional point untuk Defendse : ");
         addDef1 = scan.nextInt();
+        adds += addDef1
 
         System.out.println("Masukkan additional point untuk Energy : ");
         addEner1 = scan.nextInt();
+        adds += addEner1;
+        //bikin fungsi ngecek adds >10
+
 
         Player1 P1 = new Player1(namaChar1,  addHp1, addAtk1, addDef1, addEner1);
         P1.display();
         System.out.println(" ");
+        adds = 0;
 
         //Mengambil input untuk membuat player 2
         System.out.print("Masukkan Nama Karakter Player2 : ");
@@ -34,15 +41,20 @@ public class Main {
         System.out.println("Anda memiliki 10 additional point untuk mengupgrade Hero anda");
         System.out.println("Masukkan additional point untuk HP : ");
         addHp2 = scan.nextInt();
+        adds += addHp2;
 
         System.out.println("Masukkan additional point untuk Attack : ");
         addAtk2 = scan.nextInt();
+        adds += addAtk2;
 
         System.out.println("Masukkan additional point untuk Defendse : ");
         addDef2 = scan.nextInt();
+        adds += addDef2;
 
         System.out.println("Masukkan additional point untuk Energy : ");
         addEner2 = scan.nextInt();
+        adds += addEner1;
+        //bikin fungsi ngecek adds >10
 
         Player2 P2 = new Player2(namaChar2,  addHp2, addAtk2, addDef2, addEner2);
         P2.display();
