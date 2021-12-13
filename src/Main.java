@@ -106,19 +106,40 @@ public class Main {
                 skill = scan.nextInt();
                 switch (skill) {
                     case 1 -> {
-                        P1.punch(P2);
-                        System.out.println(P1.getCharName() + " Punch " + P2.getCharName() + " " + P1.FinalAtk);
-                        System.out.println(P2.getCharName() + " HP = " + P2.FinalHp + "\n");
+                        if (P1.FinalEner < 2) {
+                            System.out.println("Your energy is bellow 2, you gonna sleep");
+                            P1.Sleep();
+                            System.out.println("You're sleep and energy increased by 7");
+                            System.out.println("Energy = " + P1.FinalEner + "\n");
+                        } else {
+                            P1.punch(P2);
+                            System.out.println(P1.getCharName() + " Punch " + P2.getCharName() + " " + P1.FinalAtk);
+                            System.out.println(P2.getCharName() + " HP = " + P2.FinalHp + "\n");
+                        }
                     }
                     case 2 -> {
-                        P1.Kick(P2);
-                        System.out.println(P1.getCharName() + " Kick " + P2.getCharName() + " " + P1.FinalAtk);
-                        System.out.println(P2.getCharName() + " HP = " + P2.FinalHp + "\n");
+                        if (P1.FinalEner < 4) {
+                            System.out.println("Your energy is bellow 4, you gonna sleep");
+                            P1.Sleep();
+                            System.out.println("You're sleep and energy increased by 7");
+                            System.out.println("Energy = " + P1.FinalEner + "\n");
+                        } else {
+                            P1.Kick(P2);
+                            System.out.println(P1.getCharName() + " Kick " + P2.getCharName() + " " + P1.FinalAtk);
+                            System.out.println(P2.getCharName() + " HP = " + P2.FinalHp + "\n");
+                        }
                     }
                     case 3 -> {
-                        P1.Slash(P2);
-                        System.out.println(P1.getCharName() + " Slash " + P2.getCharName() + " " + P1.FinalAtk);
-                        System.out.println(P2.getCharName() + " HP = " + P2.FinalHp + "\n");
+                        if (P1.FinalEner < 7) {
+                            System.out.println("Your energy is bellow 7, you gonna sleep");
+                            P1.Sleep();
+                            System.out.println("You're sleep and energy increased by 7");
+                            System.out.println("Energy = " + P1.FinalEner + "\n");
+                        } else {
+                            P1.Slash(P2);
+                            System.out.println(P1.getCharName() + " Slash " + P2.getCharName() + " " + P1.FinalAtk);
+                            System.out.println(P2.getCharName() + " HP = " + P2.FinalHp + "\n");
+                        }
                     }
                     case 4 -> {
                         P1.Sleep();
@@ -145,19 +166,40 @@ public class Main {
                 skill = scan.nextInt();
                 switch (skill) {
                     case 1 -> {
-                        P2.punch(P1);
-                        System.out.println(P2.getCharName() + " Punch " + P1.getCharName() + " " + P2.FinalAtk);
-                        System.out.println(P1.getCharName() + " HP = " + P1.FinalHp + "\n");
+                        if (P2.FinalEner < 2) {
+                            System.out.println("Your energy is bellow 2, you gonna sleep");
+                            P2.Sleep();
+                            System.out.println("You're sleep and energy increased by 7");
+                            System.out.println("Energy = " + P2.FinalEner + "\n");
+                        } else {
+                            P2.punch(P1);
+                            System.out.println(P2.getCharName() + " Punch " + P1.getCharName() + " " + P2.FinalAtk);
+                            System.out.println(P1.getCharName() + " HP = " + P1.FinalHp + "\n");
+                        }
                     }
                     case 2 -> {
-                        P2.Kick(P1);
-                        System.out.println(P2.getCharName() + " Kick " + P1.getCharName() + " " + P2.FinalAtk);
-                        System.out.println(P1.getCharName() + " HP = " + P1.FinalHp + "\n");
+                        if (P2.FinalEner < 4) {
+                            System.out.println("Your energy is bellow 4, you gonna sleep");
+                            P2.Sleep();
+                            System.out.println("You're sleep and energy increased by 7");
+                            System.out.println("Energy = " + P2.FinalEner + "\n");
+                        } else {
+                            P2.Kick(P1);
+                            System.out.println(P2.getCharName() + " Kick " + P1.getCharName() + " " + P2.FinalAtk);
+                            System.out.println(P1.getCharName() + " HP = " + P1.FinalHp + "\n");
+                        }
                     }
                     case 3 -> {
-                        P2.Slash(P1);
-                        System.out.println(P2.getCharName() + " Slash " + P1.getCharName() + " " + P2.FinalAtk);
-                        System.out.println(P1.getCharName() + " HP = " + P1.FinalHp + "\n");
+                        if (P2.FinalEner < 7) {
+                            System.out.println("Your energy is bellow 7, you gonna sleep");
+                            P2.Sleep();
+                            System.out.println("You're sleep and energy increased by 7");
+                            System.out.println("Energy = " + P2.FinalEner + "\n");
+                        } else {
+                            P2.Slash(P1);
+                            System.out.println(P2.getCharName() + " Slash " + P1.getCharName() + " " + P2.FinalAtk);
+                            System.out.println(P1.getCharName() + " HP = " + P1.FinalHp + "\n");
+                        }
                     }
                     case 4 -> {
                         P2.Sleep();
