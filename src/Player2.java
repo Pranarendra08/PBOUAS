@@ -35,6 +35,10 @@ public class Player2 extends Player{
     }
 
     public void Sleep() {
-        FinalEner += 10;
+        if (FinalEner + 10 > TotalEner) {
+            FinalEner = TotalEner;
+        } else {
+            FinalEner += 10;
+        }
     }
 }
