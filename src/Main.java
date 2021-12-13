@@ -5,8 +5,7 @@ public class Main {
         System.out.println("");
         Scanner scan = new Scanner(System.in);
         String namaChar1, namaChar2;
-        int addHp1, addAtk1, addDef1, addHp2, addAtk2, addDef2, addEner1, addEner2, skill, adds = 0;
-
+        int addHp1, addAtk1, addDef1, addHp2, addAtk2, addDef2, addEner1, addEner2, skill, adds = 10;
 
         //Mengambil input untuk membuat player 1
         System.out.print("Masukkan Nama Karakter Player1 : ");
@@ -15,26 +14,42 @@ public class Main {
         System.out.println("Anda memiliki 10 additional point untuk mengupgrade Hero anda");
         System.out.println("Masukkan additional point untuk HP : ");
         addHp1 = scan.nextInt();
-        adds += addHp1;
+        adds -= addHp1;
+        while (adds < 0){
+            addHp1 = 10;
+            break;
+        }
 
         System.out.println("Masukkan additional point untuk Attack : ");
         addAtk1 = scan.nextInt();
-        adds += addAtk1;
+        adds -= addAtk1;
+        while (adds < 0) {
+            addAtk1 = 0;
+            break;
+        }
 
         System.out.println("Masukkan additional point untuk Defendse : ");
         addDef1 = scan.nextInt();
-        adds += addDef1;
+        adds -= addDef1;
+        while (adds < 0) {
+            addDef1 = 0;
+            break;
+        }
 
         System.out.println("Masukkan additional point untuk Energy : ");
         addEner1 = scan.nextInt();
-        adds += addEner1;
+        adds -= addEner1;
+        while (adds < 0); {
+            addEner1 = 0;
+            break;
+        }
         //bikin fungsi ngecek adds >10
 
         //membuat objek player 1
         Player1 P1 = new Player1(namaChar1,  addHp1, addAtk1, addDef1, addEner1);
         P1.display();
         System.out.println(" ");
-        adds = 0;
+        adds = 10;
 
         //Mengambil input untuk membuat player 2
         System.out.print("Masukkan Nama Karakter Player2 : ");
@@ -43,19 +58,35 @@ public class Main {
         System.out.println("Anda memiliki 10 additional point untuk mengupgrade Hero anda");
         System.out.println("Masukkan additional point untuk HP : ");
         addHp2 = scan.nextInt();
-        adds += addHp2;
+        adds -= addHp2;
+        while (adds < 0){
+            addHp2 = 10;
+            break;
+        }
 
         System.out.println("Masukkan additional point untuk Attack : ");
         addAtk2 = scan.nextInt();
-        adds += addAtk2;
+        adds -= addAtk2;
+        while (adds < 0){
+            addAtk2 = 10;
+            break;
+        }
 
         System.out.println("Masukkan additional point untuk Defendse : ");
         addDef2 = scan.nextInt();
-        adds += addDef2;
+        adds -= addDef2;
+        while (adds < 0){
+            addDef2 = 10;
+            break;
+        }
 
         System.out.println("Masukkan additional point untuk Energy : ");
         addEner2 = scan.nextInt();
-        adds += addEner1;
+        adds -= addEner1;
+        while (adds < 0){
+            addEner2 = 10;
+            break;
+        }
         //bikin fungsi ngecek adds >10
 
         //membuat objek player 2
