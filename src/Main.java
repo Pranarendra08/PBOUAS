@@ -108,7 +108,7 @@ public class Main {
                         if (P1.FinalEner < 2) {
                             System.out.println("Your energy is bellow 2, you gonna sleep");
                             P1.Sleep();
-                            System.out.println("You're sleep and your energy increased by 7");
+                            System.out.println("You're sleep and your energy increased by 10");
                             System.out.println("Energy = " + P1.FinalEner + "\n");
                         } else {
                             P1.punch(P2);
@@ -120,7 +120,7 @@ public class Main {
                         if (P1.FinalEner < 4) {
                             System.out.println("Your energy is bellow 4, you gonna sleep");
                             P1.Sleep();
-                            System.out.println("You're sleep and your energy increased by 7");
+                            System.out.println("You're sleep and your energy increased by 10");
                             System.out.println("Energy = " + P1.FinalEner + "\n");
                         } else {
                             P1.Kick(P2);
@@ -132,7 +132,7 @@ public class Main {
                         if (P1.FinalEner < 7) {
                             System.out.println("Your energy is bellow 7, you gonna sleep");
                             P1.Sleep();
-                            System.out.println("You're sleep and your energy increased by 7");
+                            System.out.println("You're sleep and your energy increased by 10");
                             System.out.println("Energy = " + P1.FinalEner + "\n");
                         } else {
                             P1.Slash(P2);
@@ -142,12 +142,12 @@ public class Main {
                     }
                     case 4 -> {
                         P1.Sleep();
-                        System.out.println("Your energy increased by 7");
+                        System.out.println("Your energy increased by 10");
                         System.out.println("Energy = " + P1.FinalEner + "\n");
                     }
                     default -> {
                         P1.Sleep();
-                        System.out.println("Your energy increased by 7");
+                        System.out.println("Your energy increased by 10");
                         System.out.println("Energy = " + P1.FinalEner + "\n");
                     }
                 }
@@ -170,7 +170,7 @@ public class Main {
                         if (P2.FinalEner < 2) {
                             System.out.println("Your energy is bellow 2, you gonna sleep");
                             P2.Sleep();
-                            System.out.println("You're sleep and your energy increased by 7");
+                            System.out.println("You're sleep and your energy increased by 10");
                             System.out.println("Energy = " + P2.FinalEner + "\n");
                         } else {
                             P2.punch(P1);
@@ -182,7 +182,7 @@ public class Main {
                         if (P2.FinalEner < 4) {
                             System.out.println("Your energy is bellow 4, you gonna sleep");
                             P2.Sleep();
-                            System.out.println("You're sleep and your energy increased by 7");
+                            System.out.println("You're sleep and your energy increased by 10");
                             System.out.println("Energy = " + P2.FinalEner + "\n");
                         } else {
                             P2.Kick(P1);
@@ -194,7 +194,7 @@ public class Main {
                         if (P2.FinalEner < 7) {
                             System.out.println("Your energy is bellow 7, you gonna sleep");
                             P2.Sleep();
-                            System.out.println("You're sleep and your energy increased by 7");
+                            System.out.println("You're sleep and your energy increased by 10");
                             System.out.println("Energy = " + P2.FinalEner + "\n");
                         } else {
                             P2.Slash(P1);
@@ -204,12 +204,12 @@ public class Main {
                     }
                     case 4 -> {
                         P2.Sleep();
-                        System.out.println("Your energy increased by 7");
+                        System.out.println("Your energy increased by 10");
                         System.out.println("Energy = " + P2.FinalEner + "\n");
                     }
                     default -> {
                         P2.Sleep();
-                        System.out.println("Your energy increased by 7");
+                        System.out.println("Your energy increased by 10");
                         System.out.println("Energy = " + P2.FinalEner + "\n");
                     }
                 }

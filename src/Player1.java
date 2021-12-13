@@ -5,7 +5,8 @@ public class Player1 extends Player{
     int FinalHp = Hp + (this.addHp * 100);
     int FinalAtk = Atk + (this.addAtk * 10);
     int FinalDef = Def + (this.addDef * 5);
-    int FinalEner = Ener + (this.addEner * 2);
+    int TotalEner = Ener + (this.addEner * 2);
+    int FinalEner = TotalEner;
     int Damage = 0;
 
     public void display() {
@@ -34,6 +35,10 @@ public class Player1 extends Player{
     }
 
     public void Sleep() {
-        FinalEner += 10;
+        if (FinalEner + 10 > TotalEner) {
+            FinalEner = TotalEner;
+        } else {
+            FinalEner += 10;
+        }
     }
 }
