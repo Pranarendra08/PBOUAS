@@ -7,6 +7,7 @@ public class Main {
         String namaChar1, namaChar2;
         int addHp1, addAtk1, addDef1, addHp2, addAtk2, addDef2, addEner1, addEner2, skill, adds = 0;
 
+
         //Mengambil input untuk membuat player 1
         System.out.print("Masukkan Nama Karakter Player1 : ");
         namaChar1 = scan.next();
@@ -29,6 +30,7 @@ public class Main {
         adds += addEner1;
         //bikin fungsi ngecek adds >10
 
+        //membuat objek player 1
         Player1 P1 = new Player1(namaChar1,  addHp1, addAtk1, addDef1, addEner1);
         P1.display();
         System.out.println(" ");
@@ -56,12 +58,12 @@ public class Main {
         adds += addEner1;
         //bikin fungsi ngecek adds >10
 
-
+        //membuat objek player 2
         Player2 P2 = new Player2(namaChar2,  addHp2, addAtk2, addDef2, addEner2);
         P2.display();
         System.out.println(" ");
 
-
+        //the games
         do {
             if (P1.FinalHp > 0) {
                 System.out.println(P1.getCharName() + " turn");
