@@ -5,7 +5,7 @@ public class Main {
         System.out.println("");
         Scanner scan = new Scanner(System.in);
         String namaChar1, namaChar2;
-        int addHp1, addAtk1, addDef1, addHp2, addAtk2, addDef2, addEner1, addEner2, skill, adds = 10;
+        int addHp1, addAtk1, addDef1, addHp2, addAtk2, addDef2, addEner1, addEner2, skill, TotalAdds = 10, adds = 0;
 
         //Mengambil input untuk membuat player 1
         System.out.print("Masukkan Nama Karakter Player1 : ");
@@ -14,41 +14,49 @@ public class Main {
         System.out.println("Anda memiliki 10 additional point untuk mengupgrade Hero anda");
         System.out.println("Masukkan additional point untuk HP : ");
         addHp1 = scan.nextInt();
-        adds -= addHp1;
-        while (adds < 0) {
-            addHp1 = 10;
-            break;
+        if (adds + addHp1 > TotalAdds) {
+            addHp1 = TotalAdds - adds;
+            adds += addHp1;
+        } else {
+            addHp1 = addHp1;
+            adds += addHp1;
         }
 
         System.out.println("Masukkan additional point untuk Attack : ");
         addAtk1 = scan.nextInt();
-        adds -= addAtk1;
-        while (adds < 0) {
-            addAtk1 = 0;
-            break;
+        if (adds + addAtk1> TotalAdds) {
+            addAtk1 = TotalAdds - adds;
+            adds += addAtk1;
+        } else {
+            addAtk1 = addAtk1;
+            adds += addAtk1;
         }
 
         System.out.println("Masukkan additional point untuk Defense : ");
         addDef1 = scan.nextInt();
-        adds -= addDef1;
-        while (adds < 0) {
-            addDef1 = 0;
-            break;
+        if (adds + addDef1> TotalAdds) {
+            addDef1 = TotalAdds - adds;
+            adds += addDef1;
+        } else {
+            addDef1 = addDef1;
+            adds += addDef1;
         }
 
         System.out.println("Masukkan additional point untuk Energy : ");
         addEner1 = scan.nextInt();
-        adds -= addEner1;
-        while (adds < 0) {
-            addEner1 = 0;
-            break;
+        if (adds + addEner1> TotalAdds) {
+            addEner1 = TotalAdds - adds;
+            adds += addEner1;
+        } else {
+            addEner1 = addEner1;
+            adds += addEner1;
         }
 
         //membuat objek player 1
         Player1 P1 = new Player1(namaChar1,  addHp1, addAtk1, addDef1, addEner1);
         P1.display();
         System.out.println(" ");
-        adds = 10;
+        adds = 0;
 
         //Mengambil input untuk membuat player 2
         System.out.print("Masukkan Nama Karakter Player2 : ");
@@ -57,34 +65,42 @@ public class Main {
         System.out.println("Anda memiliki 10 additional point untuk mengupgrade Hero anda");
         System.out.println("Masukkan additional point untuk HP : ");
         addHp2 = scan.nextInt();
-        adds -= addHp2;
-        while (adds < 0) {
-            addHp2 = 10;
-            break;
+        if (adds + addHp2 > TotalAdds) {
+            addHp2 = TotalAdds - adds;
+            adds += addHp2;
+        } else {
+            addHp2 = addHp2;
+            adds += addHp2;
         }
 
         System.out.println("Masukkan additional point untuk Attack : ");
         addAtk2 = scan.nextInt();
-        adds -= addAtk2;
-        while (adds < 0) {
-            addAtk2 = 0;
-            break;
+        if (adds + addAtk2> TotalAdds) {
+            addAtk2 = TotalAdds - adds;
+            adds += addAtk2;
+        } else {
+            addAtk2 = addAtk2;
+            adds += addAtk2;
         }
 
         System.out.println("Masukkan additional point untuk Defense : ");
         addDef2 = scan.nextInt();
-        adds -= addDef2;
-        while (adds < 0) {
-            addDef2 = 0;
-            break;
+        if (adds + addDef2> TotalAdds) {
+            addDef2 = TotalAdds - adds;
+            adds += addDef2;
+        } else {
+            addDef2 = addDef2;
+            adds += addDef2;
         }
 
         System.out.println("Masukkan additional point untuk Energy : ");
         addEner2 = scan.nextInt();
-        adds -= addEner1;
-        while (adds < 0) {
-            addEner2 = 0;
-            break;
+        if (adds + addEner2> TotalAdds) {
+            addEner2 = TotalAdds - adds;
+            adds += addEner2;
+        } else {
+            addEner2 = addEner2;
+            adds += addEner2;
         }
 
         //membuat objek player 2
@@ -100,7 +116,7 @@ public class Main {
                 System.out.println(P1.getCharName() + " HP = " + P1.FinalHp + " Energy = " + P1.FinalEner);
                 System.out.println(P2.getCharName() + " HP = " + P2.FinalHp + " Energy = " + P2.FinalEner);
 
-                System.out.println("1. Punch\n2. Kick\n3. Slash\n4. Sleep");
+                System.out.println("\n1. Punch cost 2 energy\n2. Kick cost 4 energy\n3. Slash cost 7 energy\n4. Sleep restore 10 energy");
                 System.out.println("Choose your skill");
                 skill = scan.nextInt();
                 switch (skill) {
@@ -162,7 +178,7 @@ public class Main {
                 System.out.println(P1.getCharName() + " HP = " + P1.FinalHp + " Energy = " + P1.FinalEner);
                 System.out.println(P2.getCharName() + " HP = " + P2.FinalHp + " Energy = " + P2.FinalEner);
 
-                System.out.println("1. Punch\n2. Kick\n3. Slash\n4. Sleep");
+                System.out.println("\n1. Punch cost 2 energy\n2. Kick cost 4 energy\n3. Slash cost 7 energy\n4. Sleep restore 10 energy");
                 System.out.println("Choose your skill");
                 skill = scan.nextInt();
                 switch (skill) {
