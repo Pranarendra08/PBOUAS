@@ -16,19 +16,18 @@ public class Main {
         addHp1 = scan.nextInt();
         adds += addHp1;
 
-        System.out.println("Masukkan additional point untuk Atrack : ");
+        System.out.println("Masukkan additional point untuk Attack : ");
         addAtk1 = scan.nextInt();
         adds += addAtk1;
 
         System.out.println("Masukkan additional point untuk Defendse : ");
         addDef1 = scan.nextInt();
-        adds += addDef1
+        adds += addDef1;
 
         System.out.println("Masukkan additional point untuk Energy : ");
         addEner1 = scan.nextInt();
         adds += addEner1;
         //bikin fungsi ngecek adds >10
-
 
         Player1 P1 = new Player1(namaChar1,  addHp1, addAtk1, addDef1, addEner1);
         P1.display();
@@ -61,6 +60,7 @@ public class Main {
         Player2 P2 = new Player2(namaChar2,  addHp2, addAtk2, addDef2, addEner2);
         P2.display();
         System.out.println(" ");
+
 
         do {
             if (P1.FinalHp > 0) {
