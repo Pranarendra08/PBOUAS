@@ -6,6 +6,7 @@ public class Player1 extends Player{
     int FinalAtk = Atk + (this.addAtk * 10);
     int FinalDef = Def + (this.addDef * 5);
     int FinalEner = Ener + (this.addEner * 2);
+    int Damage = 0;
 
     public void display() {
         System.out.println("HP      : " + FinalHp);
@@ -17,16 +18,19 @@ public class Player1 extends Player{
     public void punch(Player2 KarB) {
         KarB.FinalHp = KarB.FinalHp - (FinalAtk - (KarB.FinalDef / 2));
         FinalEner -= 2;
+        Damage = FinalAtk - (KarB.FinalDef / 2);
     }
 
     public void Kick(Player2 KarB) {
         KarB.FinalHp = KarB.FinalHp - (FinalAtk - (KarB.FinalDef / 4));
         FinalEner -= 4;
+        Damage = FinalAtk - (KarB.FinalDef / 4);
     }
 
     public void Slash(Player2 KarB) {
         KarB.FinalHp = KarB.FinalHp - (FinalAtk - (KarB.FinalDef / 10));
         FinalEner -= 7;
+        Damage = FinalAtk - (KarB.FinalDef / 10);
     }
 
     public void Sleep() {

@@ -1,5 +1,5 @@
 import java.util.Scanner;
-// tinggal fitur batasan additional point
+
 public class Main {
     public static void main(String[] args) {
         System.out.println("");
@@ -43,7 +43,6 @@ public class Main {
             addEner1 = 0;
             break;
         }
-        //bikin fungsi ngecek adds >10
 
         //membuat objek player 1
         Player1 P1 = new Player1(namaChar1,  addHp1, addAtk1, addDef1, addEner1);
@@ -67,7 +66,7 @@ public class Main {
         System.out.println("Masukkan additional point untuk Attack : ");
         addAtk2 = scan.nextInt();
         adds -= addAtk2;
-        while (adds < 0) {// ini bug
+        while (adds < 0) {
             addAtk2 = 0;
             break;
         }
@@ -87,7 +86,6 @@ public class Main {
             addEner2 = 0;
             break;
         }
-        //bikin fungsi ngecek adds >10
 
         //membuat objek player 2
         Player2 P2 = new Player2(namaChar2,  addHp2, addAtk2, addDef2, addEner2);
@@ -101,6 +99,7 @@ public class Main {
                 System.out.println(P1.getCharName() + " turn");
                 System.out.println(P1.getCharName() + " HP = " + P1.FinalHp + " Energy = " + P1.FinalEner);
                 System.out.println(P2.getCharName() + " HP = " + P2.FinalHp + " Energy = " + P2.FinalEner);
+
                 System.out.println("1. Punch\n2. Kick\n3. Slash\n4. Sleep");
                 System.out.println("Choose your skill");
                 skill = scan.nextInt();
@@ -109,11 +108,11 @@ public class Main {
                         if (P1.FinalEner < 2) {
                             System.out.println("Your energy is bellow 2, you gonna sleep");
                             P1.Sleep();
-                            System.out.println("You're sleep and energy increased by 7");
+                            System.out.println("You're sleep and your energy increased by 7");
                             System.out.println("Energy = " + P1.FinalEner + "\n");
                         } else {
                             P1.punch(P2);
-                            System.out.println(P1.getCharName() + " Punch " + P2.getCharName() + " " + P1.FinalAtk);
+                            System.out.println(P1.getCharName() + " Punch " + P2.getCharName() + " " + P1.Damage);
                             System.out.println(P2.getCharName() + " HP = " + P2.FinalHp + "\n");
                         }
                     }
@@ -121,11 +120,11 @@ public class Main {
                         if (P1.FinalEner < 4) {
                             System.out.println("Your energy is bellow 4, you gonna sleep");
                             P1.Sleep();
-                            System.out.println("You're sleep and energy increased by 7");
+                            System.out.println("You're sleep and your energy increased by 7");
                             System.out.println("Energy = " + P1.FinalEner + "\n");
                         } else {
                             P1.Kick(P2);
-                            System.out.println(P1.getCharName() + " Kick " + P2.getCharName() + " " + P1.FinalAtk);
+                            System.out.println(P1.getCharName() + " Kick " + P2.getCharName() + " " + P1.Damage);
                             System.out.println(P2.getCharName() + " HP = " + P2.FinalHp + "\n");
                         }
                     }
@@ -133,11 +132,11 @@ public class Main {
                         if (P1.FinalEner < 7) {
                             System.out.println("Your energy is bellow 7, you gonna sleep");
                             P1.Sleep();
-                            System.out.println("You're sleep and energy increased by 7");
+                            System.out.println("You're sleep and your energy increased by 7");
                             System.out.println("Energy = " + P1.FinalEner + "\n");
                         } else {
                             P1.Slash(P2);
-                            System.out.println(P1.getCharName() + " Slash " + P2.getCharName() + " " + P1.FinalAtk);
+                            System.out.println(P1.getCharName() + " Slash " + P2.getCharName() + " " + P1.Damage);
                             System.out.println(P2.getCharName() + " HP = " + P2.FinalHp + "\n");
                         }
                     }
@@ -156,11 +155,13 @@ public class Main {
                 System.out.println(P2.getCharName() + " WIN!");
                 break;
             }
+
             //giliran player 2
             if (P2.FinalHp > 0) {
                 System.out.println(P2.getCharName() + " turn");
                 System.out.println(P1.getCharName() + " HP = " + P1.FinalHp + " Energy = " + P1.FinalEner);
                 System.out.println(P2.getCharName() + " HP = " + P2.FinalHp + " Energy = " + P2.FinalEner);
+
                 System.out.println("1. Punch\n2. Kick\n3. Slash\n4. Sleep");
                 System.out.println("Choose your skill");
                 skill = scan.nextInt();
@@ -169,11 +170,11 @@ public class Main {
                         if (P2.FinalEner < 2) {
                             System.out.println("Your energy is bellow 2, you gonna sleep");
                             P2.Sleep();
-                            System.out.println("You're sleep and energy increased by 7");
+                            System.out.println("You're sleep and your energy increased by 7");
                             System.out.println("Energy = " + P2.FinalEner + "\n");
                         } else {
                             P2.punch(P1);
-                            System.out.println(P2.getCharName() + " Punch " + P1.getCharName() + " " + P2.FinalAtk);
+                            System.out.println(P2.getCharName() + " Punch " + P1.getCharName() + " " + P2.Damage);
                             System.out.println(P1.getCharName() + " HP = " + P1.FinalHp + "\n");
                         }
                     }
@@ -181,11 +182,11 @@ public class Main {
                         if (P2.FinalEner < 4) {
                             System.out.println("Your energy is bellow 4, you gonna sleep");
                             P2.Sleep();
-                            System.out.println("You're sleep and energy increased by 7");
+                            System.out.println("You're sleep and your energy increased by 7");
                             System.out.println("Energy = " + P2.FinalEner + "\n");
                         } else {
                             P2.Kick(P1);
-                            System.out.println(P2.getCharName() + " Kick " + P1.getCharName() + " " + P2.FinalAtk);
+                            System.out.println(P2.getCharName() + " Kick " + P1.getCharName() + " " + P2.Damage);
                             System.out.println(P1.getCharName() + " HP = " + P1.FinalHp + "\n");
                         }
                     }
@@ -193,11 +194,11 @@ public class Main {
                         if (P2.FinalEner < 7) {
                             System.out.println("Your energy is bellow 7, you gonna sleep");
                             P2.Sleep();
-                            System.out.println("You're sleep and energy increased by 7");
+                            System.out.println("You're sleep and your energy increased by 7");
                             System.out.println("Energy = " + P2.FinalEner + "\n");
                         } else {
                             P2.Slash(P1);
-                            System.out.println(P2.getCharName() + " Slash " + P1.getCharName() + " " + P2.FinalAtk);
+                            System.out.println(P2.getCharName() + " Slash " + P1.getCharName() + " " + P2.Damage);
                             System.out.println(P1.getCharName() + " HP = " + P1.FinalHp + "\n");
                         }
                     }
