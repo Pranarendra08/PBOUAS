@@ -8,9 +8,9 @@ public class Player2 extends Player{
     int FinalEner = Ener + (this.addEner * 2);
 
     public void display() {
-        System.out.println("HP  : " + FinalHp);
-        System.out.println("ATK : " + FinalAtk);
-        System.out.println("DEF : " + FinalDef);
+        System.out.println("HP      : " + FinalHp);
+        System.out.println("ATK     : " + FinalAtk);
+        System.out.println("DEF     : " + FinalDef);
         System.out.println("Energy  : " + FinalEner);
     }
 

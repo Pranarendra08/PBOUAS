@@ -28,7 +28,7 @@ public class Main {
             break;
         }
 
-        System.out.println("Masukkan additional point untuk Defendse : ");
+        System.out.println("Masukkan additional point untuk Defense : ");
         addDef1 = scan.nextInt();
         adds -= addDef1;
         while (adds < 0) {
@@ -67,12 +67,12 @@ public class Main {
         System.out.println("Masukkan additional point untuk Attack : ");
         addAtk2 = scan.nextInt();
         adds -= addAtk2;
-        while (adds < 0) {
+        while (adds < 0) {// ini bug
             addAtk2 = 0;
             break;
         }
 
-        System.out.println("Masukkan additional point untuk Defendse : ");
+        System.out.println("Masukkan additional point untuk Defense : ");
         addDef2 = scan.nextInt();
         adds -= addDef2;
         while (adds < 0) {
@@ -112,7 +112,7 @@ public class Main {
                     }
                     case 2 -> {
                         P1.Kick(P2);
-                        System.out.println(P1.getCharName() + " Kick " + P2.getCharName() + " " + P1.FinalHp);
+                        System.out.println(P1.getCharName() + " Kick " + P2.getCharName() + " " + P1.FinalAtk);
                         System.out.println(P2.getCharName() + " HP = " + P2.FinalHp + "\n");
                     }
                     case 3 -> {
