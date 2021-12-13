@@ -15,7 +15,7 @@ public class Main {
         System.out.println("Masukkan additional point untuk HP : ");
         addHp1 = scan.nextInt();
         adds -= addHp1;
-        while (adds < 0){
+        while (adds < 0) {
             addHp1 = 10;
             break;
         }
@@ -39,7 +39,7 @@ public class Main {
         System.out.println("Masukkan additional point untuk Energy : ");
         addEner1 = scan.nextInt();
         adds -= addEner1;
-        while (adds < 0); {
+        while (adds < 0) {
             addEner1 = 0;
             break;
         }
@@ -59,7 +59,7 @@ public class Main {
         System.out.println("Masukkan additional point untuk HP : ");
         addHp2 = scan.nextInt();
         adds -= addHp2;
-        while (adds < 0){
+        while (adds < 0) {
             addHp2 = 10;
             break;
         }
@@ -67,24 +67,24 @@ public class Main {
         System.out.println("Masukkan additional point untuk Attack : ");
         addAtk2 = scan.nextInt();
         adds -= addAtk2;
-        while (adds < 0){
-            addAtk2 = 10;
+        while (adds < 0) {
+            addAtk2 = 0;
             break;
         }
 
         System.out.println("Masukkan additional point untuk Defendse : ");
         addDef2 = scan.nextInt();
         adds -= addDef2;
-        while (adds < 0){
-            addDef2 = 10;
+        while (adds < 0) {
+            addDef2 = 0;
             break;
         }
 
         System.out.println("Masukkan additional point untuk Energy : ");
         addEner2 = scan.nextInt();
         adds -= addEner1;
-        while (adds < 0){
-            addEner2 = 10;
+        while (adds < 0) {
+            addEner2 = 0;
             break;
         }
         //bikin fungsi ngecek adds >10
@@ -96,6 +96,7 @@ public class Main {
 
         //the games
         do {
+            //giliran player 1
             if (P1.FinalHp > 0) {
                 System.out.println(P1.getCharName() + " turn");
                 System.out.println(P1.getCharName() + " HP = " + P1.FinalHp + " Energy = " + P1.FinalEner);
@@ -134,7 +135,7 @@ public class Main {
                 System.out.println(P2.getCharName() + " WIN!");
                 break;
             }
-
+            //giliran player 2
             if (P2.FinalHp > 0) {
                 System.out.println(P2.getCharName() + " turn");
                 System.out.println(P1.getCharName() + " HP = " + P1.FinalHp + " Energy = " + P1.FinalEner);

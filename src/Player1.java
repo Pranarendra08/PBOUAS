@@ -15,17 +15,17 @@ public class Player1 extends Player{
     }
 
     public void punch(Player2 KarB) {
-        KarB.FinalHp = FinalAtk - (KarB.FinalDef * (50 / 100));
+        KarB.FinalHp = KarB.FinalHp - (FinalAtk - (KarB.FinalDef * (50 / 100)));
         FinalEner -= 2;
     }
 
     public void Kick(Player2 KarB) {
-        KarB.FinalHp -= FinalAtk - (KarB.FinalDef * (25 / 100));
+        KarB.FinalHp = KarB.FinalHp - (FinalAtk - (KarB.FinalDef * (25 / 100)));
         FinalEner -= 4;
     }
 
     public void Slash(Player2 KarB) {
-        KarB.FinalHp -= FinalAtk - (KarB.FinalDef * (10 / 100));
+        KarB.FinalHp = KarB.FinalHp - (FinalAtk - (KarB.FinalDef * (10 / 100)));
         FinalEner -= 7;
     }
 

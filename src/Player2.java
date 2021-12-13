@@ -11,20 +11,21 @@ public class Player2 extends Player{
         System.out.println("HP  : " + FinalHp);
         System.out.println("ATK : " + FinalAtk);
         System.out.println("DEF : " + FinalDef);
+        System.out.println("Energy  : " + FinalEner);
     }
 
     public void punch(Player1 KarB) {
-        KarB.FinalHp = FinalAtk - (KarB.FinalDef * (50 / 100));
+        KarB.FinalHp = KarB.FinalHp - (FinalAtk - (KarB.FinalDef * (50 / 100)));
         FinalEner -= 2;
     }
 
     public void Kick(Player1 KarB) {
-        KarB.FinalHp -= FinalAtk - (KarB.FinalDef * (25 / 100));
+        KarB.FinalHp = KarB.FinalHp - (FinalAtk - (KarB.FinalDef * (25 / 100)));
         FinalEner -= 4;
     }
 
     public void Slash(Player1 KarB) {
-        KarB.FinalHp -= FinalAtk - (KarB.FinalDef * (10 / 100));
+        KarB.FinalHp = KarB.FinalHp - (FinalAtk - (KarB.FinalDef * (10 / 100)));
         FinalEner -= 7;
     }
 
