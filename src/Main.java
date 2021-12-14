@@ -2,7 +2,8 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println("");
+        System.out.println("Selamat datang digame Duel Fighter");
+        System.out.println("Buatlah karaktermu");
         Scanner scan = new Scanner(System.in);
         String namaChar1, namaChar2;
         int addHp1, addAtk1, addDef1, addHp2, addAtk2, addDef2, addEner1, addEner2, skill, TotalAdds = 10, adds = 0;
